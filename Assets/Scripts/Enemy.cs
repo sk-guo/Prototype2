@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
     public int friendshipIncrease;
     public int friendship = 0;
 
+    public int playerHealthDecrease; // NEW: Amount of health the player loses when attacking
+    public int playerHealthIncrease; // NEW: Amount of health the player gains when befriending
+
     public Slider healthBar;
     public Slider friendshipBar;
     public TextMeshProUGUI healthBarText;

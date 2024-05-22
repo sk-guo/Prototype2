@@ -23,4 +23,12 @@ public class SceneLoader : MonoBehaviour
             // SceneManager.LoadScene(0); // Uncomment to loop back to the first scene
         }
     }
+    public void ReloadCurrentLevel()
+    {
+        // Get the current scene index
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        // Reload the current scene by its index
+        SceneManager.LoadScene(currentSceneIndex);
+    }
 }
