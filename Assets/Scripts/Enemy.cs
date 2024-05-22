@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class Enemy : MonoBehaviour
 {
 
@@ -28,6 +29,8 @@ public class Enemy : MonoBehaviour
     public Button friendshipButton; // Button to increase friendship
     public Button nextLevelButton; // Button to proceed to the next level
 
+    public Animator animator;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -47,6 +50,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        animator.SetTrigger("wasAttacked");
         // Ensure health doesn't drop below zero
         if (health - damage < 0)
         {
@@ -54,11 +58,11 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            animator.SetTrigger("attack");
             health -= damage;
         }
-
-        healthBar.value = health;
-        UpdateHealthBarText(); // Update the health bar text.
+        StartCoroutine(DelayEnemyHealthModification());
+        
 
         if (health <= 0)
         {
@@ -70,7 +74,19 @@ public class Enemy : MonoBehaviour
             friendshipButton.interactable = false; // Disable friendship button
             nextLevelButton.interactable = true; // Enable Next Level button
         }
+
     }
+
+    IEnumerator DelayEnemyHealthModification()
+    {
+        // Wait for the attack animation to complete (adjust the time as needed)
+        yield return new WaitForSeconds(1.5f);
+
+        // Modify the enemy's health after the delay
+        healthBar.value = health;
+        UpdateHealthBarText(); // Update the health bar text.
+    }
+
 
     public void IncreaseFriendship(int amount)
     {
@@ -115,4 +131,7 @@ public class Enemy : MonoBehaviour
     {
         
     }
+
+
+
 }
