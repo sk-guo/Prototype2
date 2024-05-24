@@ -5582,9 +5582,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657c6e25f6ebb4d5783e61b8e013aec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1552770041}
+  TakeDamageButton: {fileID: 1552770041}
+  IncreaseFriendshipButton: {fileID: 1604345871}
   enemy: {fileID: 9182672040479032105}
   player: {fileID: 339966592}
+  healthBar: {fileID: 1487449526}
 --- !u!1 &1602343695
 GameObject:
   m_ObjectHideFlags: 0
@@ -7042,11 +7044,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   maxFriendship: 10
-  healthDecrease: 4
-  friendshipIncrease: 3
+  healthDecrease: 1
+  friendshipIncrease: 1
   friendship: 0
-  playerHealthDecrease: 50
-  playerHealthIncrease: 5
+  playerHealthDecrease: 1
+  playerHealthIncrease: 1
   healthBar: {fileID: 1487449526}
   friendshipBar: {fileID: 1011962200}
   healthBarText: {fileID: 40321309}

@@ -4,17 +4,21 @@ using System.Collections; // Make sure to include this for coroutines
 
 public class DamageButton : MonoBehaviour
 {
-    public Button button;
+    public Button TakeDamageButton;
+    public Button IncreaseFriendshipButton;
     public Enemy enemy;
     public Player player; // Reference to the player script
+    public Slider healthBar; //enemy health
 
     private void Start()
     {
-        button.onClick.AddListener(OnClick);
+        TakeDamageButton.onClick.AddListener(OnClick);
     }
 
     private void OnClick()
     {
+        TakeDamageButton.interactable = false;
+        IncreaseFriendshipButton.interactable = false;
         // Call the Enemy's TakeDamage method
         enemy.TakeDamage(enemy.healthDecrease);
 
@@ -28,6 +32,9 @@ public class DamageButton : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
 
         // Modify the player's health after the delay
-        player.ModifyHealth(-enemy.playerHealthDecrease);
+        if (healthBar.value > 0)
+        {
+            player.ModifyHealth(-enemy.playerHealthDecrease);
+        }        
     }
 }

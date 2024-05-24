@@ -37,8 +37,11 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             deathPanel.SetActive(true); // Show the death panel
-            damageButton.interactable = false;
-            friendshipButton.interactable = false;
+        }
+        else
+        {
+            damageButton.interactable = true;
+            friendshipButton.interactable = true;
         }
     }
 

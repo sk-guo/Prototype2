@@ -67,12 +67,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("Enemy is dead.");
-            // Show the panel with a defeat message
-            endLevelText.text = "Enemy is defeated!";
-            endLevelPanel.SetActive(true);
-            damageButton.interactable = false; // Disable damage button
-            friendshipButton.interactable = false; // Disable friendship button
-            nextLevelButton.interactable = true; // Enable Next Level button
+            StartCoroutine(ShowDefeatPanelAfterDelay(2f)); // Call coroutine with a 2-second delay
         }
 
     }
@@ -85,6 +80,17 @@ public class Enemy : MonoBehaviour
         // Modify the enemy's health after the delay
         healthBar.value = health;
         UpdateHealthBarText(); // Update the health bar text.
+    }
+
+    IEnumerator ShowDefeatPanelAfterDelay(float delay)
+    {
+        // Wait for the specified delay
+        yield return new WaitForSeconds(delay);
+
+        // Show the panel with a defeat message
+        endLevelText.text = "Enemy is defeated!";
+        endLevelPanel.SetActive(true);
+        nextLevelButton.interactable = true; // Enable Next Level button
     }
 
 
