@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
     {
         if (healthText != null)
         {
-            healthText.text = health.ToString(); // Set the text to the current health value
+            healthText.text = "Health: " + health;// Set the text to the current health value
         }
     }
 }

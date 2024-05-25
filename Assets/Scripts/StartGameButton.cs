@@ -20,6 +20,7 @@ public class EnableDisableObjects : MonoBehaviour
 
     IEnumerator EnableDisableSequence()
     {
+        yield return new WaitForSeconds(2f);
         for (int i = 0; i < 4; i++)
         {
             // Enable IndicationArrow for 1 second

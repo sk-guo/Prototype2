@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
     {
         animator.SetTrigger("wasAttacked");
         // Ensure health doesn't drop below zero
-        if (health - damage < 0)
+        if (health - damage <= 0)
         {
             health = 0;
         }
