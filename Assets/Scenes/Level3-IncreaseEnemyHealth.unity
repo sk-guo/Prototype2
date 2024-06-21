@@ -3443,7 +3443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  actualHealth: 10
+  actualHealth: 12
   maxFriendship: 50
   healthDecrease: 2
   friendshipIncrease: 1
