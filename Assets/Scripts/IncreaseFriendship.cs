@@ -12,6 +12,9 @@ public class IncreaseFriendship : MonoBehaviour
     public GameObject heart1;
     public GameObject heart2;
     public GameObject heart3;
+    public GameObject heart4;
+    public GameObject heart5;
+    public GameObject heart6;
 
     private void Start()
     {
@@ -20,6 +23,9 @@ public class IncreaseFriendship : MonoBehaviour
         heart1.SetActive(false);
         heart2.SetActive(false);
         heart3.SetActive(false);
+        heart4.SetActive(false);
+        heart5.SetActive(false);
+        heart6.SetActive(false);
     }
 
     private void OnClick()
@@ -34,17 +40,23 @@ public class IncreaseFriendship : MonoBehaviour
     {
         // Show heart1 and wait for 1 second
         heart1.SetActive(true);
+        heart4.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         // Hide heart1 and show heart2
         heart1.SetActive(false);
         heart2.SetActive(true);
+        heart4.SetActive(false);
+        heart5.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         // Hide heart2 and show heart3
         heart2.SetActive(false);
         heart3.SetActive(true);
+        heart5.SetActive(false);
+        heart6.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         // Hide heart3
         heart3.SetActive(false);
+        heart6.SetActive(false);
 
         // Now increase the enemy's friendship
         enemy.IncreaseFriendship(enemy.friendshipIncrease);

@@ -1694,7 +1694,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  maxHealth: 5
   healthBar: {fileID: 1744391031}
+  endLevelPanel: {fileID: 906395986}
   healthText: {fileID: 1176660069}
   deathPanel: {fileID: 1423913046}
   damageButton: {fileID: 1552770041}
@@ -6755,6 +6757,9 @@ MonoBehaviour:
   heart1: {fileID: 1133544111}
   heart2: {fileID: 1247980231}
   heart3: {fileID: 1262711541}
+  heart4: {fileID: 0}
+  heart5: {fileID: 0}
+  heart6: {fileID: 0}
 --- !u!1 &1630099629
 GameObject:
   m_ObjectHideFlags: 0
@@ -8161,13 +8166,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24d26dd6d1744d2382dfcfe1fed7de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  maxHealth: 3
+  actualHealth: 3
   maxFriendship: 10
   healthDecrease: 1
   friendshipIncrease: 1
   friendship: 0
   playerHealthDecrease: 1
   playerHealthIncrease: 1
+  enemyHealthIncrease: 0
   healthBar: {fileID: 1487449526}
   friendshipBar: {fileID: 1011962200}
   healthBarText: {fileID: 40321309}

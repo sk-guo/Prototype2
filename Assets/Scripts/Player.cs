@@ -4,7 +4,8 @@ using TMPro; // Make sure to include this namespace if you're using TextMeshPro
 
 public class Player : MonoBehaviour
 {
-    public int health = 100;
+    public int health;
+    public int maxHealth;
     public Slider healthBar; // Reference to the player's health bar UI
     public GameObject endLevelPanel;
     public TextMeshProUGUI healthText; // Reference to the text component that displays the health value
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
     // Initialize the health bar's maxValue and current value
     private void InitializeHealthBar()
     {
-        healthBar.maxValue = health;
+        healthBar.maxValue = maxHealth;
         healthBar.value = health;
         UpdateHealthText(); // Update the health text
     }

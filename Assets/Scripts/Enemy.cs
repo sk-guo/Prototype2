@@ -8,7 +8,8 @@ using TMPro;
 public class Enemy : MonoBehaviour
 {
 
-    public int health;
+    public int maxHealth;
+    public int actualHealth;
     public int maxFriendship;
     public int healthDecrease;
     public int friendshipIncrease;
@@ -17,6 +18,7 @@ public class Enemy : MonoBehaviour
     public int playerHealthDecrease; // NEW: Amount of health the player loses when attacking
     public int playerHealthIncrease; // NEW: Amount of health the player gains when befriending
 
+    public int enemyHealthIncrease;
     public Slider healthBar;
     public Slider friendshipBar;
     public TextMeshProUGUI healthBarText;
@@ -36,8 +38,8 @@ public class Enemy : MonoBehaviour
     {
 
         // Initialize the health and friendship bars
-        healthBar.maxValue = health;
-        healthBar.value = health;
+        healthBar.maxValue = maxHealth;
+        healthBar.value = actualHealth;
 
         friendshipBar.maxValue = maxFriendship;
         friendshipBar.value = friendship;
@@ -52,19 +54,19 @@ public class Enemy : MonoBehaviour
     {
         animator.SetTrigger("wasAttacked");
         // Ensure health doesn't drop below zero
-        if (health - damage <= 0)
+        if (actualHealth - damage <= 0)
         {
-            health = 0;
+            actualHealth = 0;
         }
         else
         {
             animator.SetTrigger("attack");
-            health -= damage;
+            actualHealth -= damage;
         }
         StartCoroutine(DelayEnemyHealthModification());
         
 
-        if (health <= 0)
+        if (actualHealth <= 0)
         {
             Debug.Log("Enemy is dead.");
             StartCoroutine(ShowDefeatPanelAfterDelay(2f)); // Call coroutine with a 2-second delay
@@ -78,7 +80,7 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         // Modify the enemy's health after the delay
-        healthBar.value = health;
+        healthBar.value = actualHealth;
         UpdateHealthBarText(); // Update the health bar text.
     }
 
@@ -107,6 +109,9 @@ public class Enemy : MonoBehaviour
         }
         friendshipBar.value = friendship;
         UpdateFriendshipBarText(); // Update the friendship bar text.
+        actualHealth += enemyHealthIncrease;
+        healthBar.value = actualHealth;
+        UpdateHealthBarText();
 
         if (friendship >= maxFriendship)
         {
@@ -123,7 +128,7 @@ public class Enemy : MonoBehaviour
     private void UpdateHealthBarText()
     {
         if (healthBarText != null)
-            healthBarText.text = "Health: " + health;
+            healthBarText.text = "Health: " + actualHealth;
     }
 
     private void UpdateFriendshipBarText()
