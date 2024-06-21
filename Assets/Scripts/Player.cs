@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public int health = 100;
     public Slider healthBar; // Reference to the player's health bar UI
+    public GameObject endLevelPanel;
     public TextMeshProUGUI healthText; // Reference to the text component that displays the health value
     public GameObject deathPanel; // Reference to the death panel GameObject
     public Button damageButton; // Reference to the attack button
@@ -37,6 +38,11 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             deathPanel.SetActive(true); // Show the death panel
+        }
+        else if (endLevelPanel.activeSelf==true)
+        {
+            damageButton.interactable = false;
+            friendshipButton.interactable = false;
         }
         else
         {
