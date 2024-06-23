@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level6-Bomb.unity
     guid: aaaf0a467432941a5b679d9aa1d4219a
+  - enabled: 1
+    path: Assets/Scenes/Level7-BombAndAttack.unity
+    guid: 202325cdf5af04d01bb2102cead7699a
   m_configObjects: {}

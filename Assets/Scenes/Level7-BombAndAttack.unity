@@ -880,7 +880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &143570202
 RectTransform:
   m_ObjectHideFlags: 0
@@ -898,7 +898,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -509.4, y: -204}
+  m_AnchoredPosition: {x: -428.5, y: -204}
   m_SizeDelta: {x: 245, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &143570204
@@ -3522,12 +3522,12 @@ MonoBehaviour:
   healthDecrease: 20
   friendshipIncrease: 1
   friendship: 100
-  playerHealthDecrease: 19
+  playerHealthDecrease: 3
   playerHealthIncrease: 1
-  enemyHealthIncrease: 5
-  bombEnemyHealthDecrease: 99
+  enemyHealthIncrease: 3
+  bombEnemyHealthDecrease: 50
   bombEnemyFriendshipDecrease: 100
-  bombPlayerHealthDecrease: 49
+  bombPlayerHealthDecrease: 5
   healthBar: {fileID: 106849491}
   friendshipBar: {fileID: 110489420}
   healthBarText: {fileID: 718089193}
@@ -6161,8 +6161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0d5a192f56741a0836d9bb92876468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  maxHealth: 50
+  health: 10
+  maxHealth: 10
   healthBar: {fileID: 686309592}
   endLevelPanel: {fileID: 1628505660}
   healthText: {fileID: 2063656854}
@@ -7210,7 +7210,7 @@ GameObject:
   - component: {fileID: 1718504785}
   - component: {fileID: 1718504784}
   - component: {fileID: 1718504783}
-  - component: {fileID: 1718504782}
+  - component: {fileID: 1718504786}
   m_Layer: 5
   m_Name: BombButton
   m_TagString: Untagged
@@ -7238,24 +7238,6 @@ RectTransform:
   m_AnchoredPosition: {x: -428.8, y: -136.1}
   m_SizeDelta: {x: 245, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1718504782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718504780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc10eb1dd21264269a064120cb0b0255, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BombButton: {fileID: 1718504783}
-  DamageButton: {fileID: 143570206}
-  IncreaseFriendshipButton: {fileID: 1474375940}
-  enemy: {fileID: 716950286}
-  player: {fileID: 1475521100}
-  healthBar: {fileID: 106849491}
 --- !u!114 &1718504783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7338,6 +7320,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718504780}
   m_CullTransparentMesh: 1
+--- !u!114 &1718504786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718504780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6efbc377e174d15906f78700b5b425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BombButton: {fileID: 1718504783}
+  DamageButton: {fileID: 143570206}
+  IncreaseFriendshipButton: {fileID: 1474375940}
+  enemy: {fileID: 716950286}
+  player: {fileID: 1475521100}
+  healthBar: {fileID: 106849491}
+  ProvokeFunction: {fileID: 1718504780}
 --- !u!1 &1764084685
 GameObject:
   m_ObjectHideFlags: 0
