@@ -3523,7 +3523,7 @@ MonoBehaviour:
   friendshipIncrease: 1
   friendship: 1
   playerHealthDecrease: 5
-  playerHealthIncrease: 1
+  playerHealthIncrease: 2
   enemyHealthIncrease: 1
   bombEnemyHealthDecrease: 50
   bombEnemyFriendshipDecrease: 100
@@ -3541,6 +3541,7 @@ MonoBehaviour:
   endGamePanel: {fileID: 0}
   endGameText: {fileID: 0}
   inGamePanel: {fileID: 0}
+  creditsBackground: {fileID: 0}
   animator: {fileID: 716950284}
 --- !u!1 &718089190
 GameObject:
