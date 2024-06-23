@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class EnemyWithBomb: MonoBehaviour
@@ -33,6 +34,8 @@ public class EnemyWithBomb: MonoBehaviour
     public Button damageButton; // Button to damage the enemy
     public Button friendshipButton; // Button to increase friendship
     public Button nextLevelButton; // Button to proceed to the next level
+    public GameObject endGamePanel;
+    public TextMeshProUGUI endGameText;
 
     public Animator animator;
 
@@ -92,10 +95,20 @@ public class EnemyWithBomb: MonoBehaviour
         // Wait for the specified delay
         yield return new WaitForSeconds(delay);
 
-        // Show the panel with a defeat message
-        endLevelText.text = "Enemy is defeated!";
-        endLevelPanel.SetActive(true);
-        nextLevelButton.interactable = true; // Enable Next Level button
+        
+        if (SceneManager.GetActiveScene().buildIndex == 9)
+        {
+            endGameText.text = "You Won The Game! Thanks For Playing!";
+            endGamePanel.SetActive(true);
+        }
+        else
+        {
+            // Show the panel with a defeat message
+            endLevelText.text = "Enemy is defeated!";
+            endLevelPanel.SetActive(true);
+            nextLevelButton.interactable = true; // Enable Next Level button
+        }
+        
     }
 
 
