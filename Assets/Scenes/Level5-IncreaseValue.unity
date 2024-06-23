@@ -3442,15 +3442,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24d26dd6d1744d2382dfcfe1fed7de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 60
-  actualHealth: 50
-  maxFriendship: 100
-  healthDecrease: 20
+  maxHealth: 30
+  actualHealth: 30
+  maxFriendship: 50
+  healthDecrease: 5
   friendshipIncrease: 1
   friendship: 0
-  playerHealthDecrease: 19
-  playerHealthIncrease: 19
-  enemyHealthIncrease: 5
+  playerHealthDecrease: 3
+  playerHealthIncrease: 5
+  enemyHealthIncrease: 2
   healthBar: {fileID: 106849491}
   friendshipBar: {fileID: 110489420}
   healthBarText: {fileID: 718089193}
@@ -6087,8 +6087,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5772c8102264414a74d9d7d9d4a99c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  maxHealth: 20
+  health: 10
+  maxHealth: 10
   healthBar: {fileID: 686309592}
   endLevelPanel: {fileID: 1628505660}
   healthText: {fileID: 2063656854}

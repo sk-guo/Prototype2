@@ -19,8 +19,11 @@ EditorBuildSettings:
     guid: 80e49459988584b2b94db8936a16a6eb
   - enabled: 1
     path: Assets/Scenes/Level4-LeftAndRight.unity
+    guid: 1d61a0df800eb4d7292bf4bb5f36a230
+  - enabled: 1
+    path: Assets/Scenes/Level5-IncreaseValue.unity
     guid: a318dc11ab9ed429a9dabf3150e5c839
   - enabled: 1
-    path: Assets/Scenes/Level5-ModifyValues.unity
-    guid: 1d61a0df800eb4d7292bf4bb5f36a230
+    path: Assets/Scenes/Level6-Bomb.unity
+    guid: aaaf0a467432941a5b679d9aa1d4219a
   m_configObjects: {}
