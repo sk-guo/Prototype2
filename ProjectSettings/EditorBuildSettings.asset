@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level7-BombAndAttack.unity
     guid: 202325cdf5af04d01bb2102cead7699a
+  - enabled: 1
+    path: Assets/Scenes/Level8-BombAndFriendship.unity
+    guid: 70dbac628f007403a8dbff47cc1685a2
   m_configObjects: {}
