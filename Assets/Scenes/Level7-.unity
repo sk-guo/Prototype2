@@ -3525,9 +3525,9 @@ MonoBehaviour:
   playerHealthDecrease: 19
   playerHealthIncrease: 1
   enemyHealthIncrease: 5
-  bombEnemyHealthDecrease: 50
+  bombEnemyHealthDecrease: 99
   bombEnemyFriendshipDecrease: 100
-  bombPlayerHealthDecrease: 5
+  bombPlayerHealthDecrease: 49
   healthBar: {fileID: 106849491}
   friendshipBar: {fileID: 110489420}
   healthBarText: {fileID: 718089193}
@@ -6161,8 +6161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0d5a192f56741a0836d9bb92876468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  maxHealth: 10
+  health: 50
+  maxHealth: 50
   healthBar: {fileID: 686309592}
   endLevelPanel: {fileID: 1628505660}
   healthText: {fileID: 2063656854}
