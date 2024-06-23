@@ -3675,6 +3675,7 @@ MonoBehaviour:
   endGamePanel: {fileID: 1849689094}
   endGameText: {fileID: 293047147}
   inGamePanel: {fileID: 762724041}
+  creditsBackground: {fileID: 2033694193}
   animator: {fileID: 716950284}
 --- !u!1 &718089190
 GameObject:
@@ -4159,7 +4160,6 @@ RectTransform:
   - {fileID: 686309591}
   - {fileID: 1628505661}
   - {fileID: 1409601210}
-  - {fileID: 1524704434}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6695,7 +6695,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524704433}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6706,11 +6706,11 @@ RectTransform:
   - {fileID: 614326824}
   - {fileID: 1342867629}
   - {fileID: 812355745}
-  m_Father: {fileID: 762724042}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 640, y: 360}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1561013380
@@ -8027,7 +8027,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 293047149}
-  - {fileID: 2033694194}
   - {fileID: 748327631}
   m_Father: {fileID: 1128394368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8542,7 +8541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2033694194
 Transform:
   m_ObjectHideFlags: 0
@@ -8552,11 +8551,11 @@ Transform:
   m_GameObject: {fileID: 2033694193}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -635.2543, y: -572.0129, z: 0}
+  m_LocalPosition: {x: -0.16992188, y: -0.08126831, z: 0}
   m_LocalScale: {x: 1.30474, y: 0.95869577, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1849689095}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2033694195
 SpriteRenderer:
@@ -9302,3 +9301,5 @@ SceneRoots:
   - {fileID: 1475521099}
   - {fileID: 637159799}
   - {fileID: 887025252}
+  - {fileID: 1524704434}
+  - {fileID: 2033694194}

@@ -37,6 +37,7 @@ public class EnemyWithBomb: MonoBehaviour
     public GameObject endGamePanel;
     public TextMeshProUGUI endGameText;
     public GameObject inGamePanel;
+    public GameObject creditsBackground;
 
     public Animator animator;
 
@@ -101,6 +102,7 @@ public class EnemyWithBomb: MonoBehaviour
         {
             endGameText.text = "You Won The Game! Thanks For Playing!";
             endGamePanel.SetActive(true);
+            creditsBackground.SetActive(true);
             inGamePanel.SetActive(false);
         }
         else
