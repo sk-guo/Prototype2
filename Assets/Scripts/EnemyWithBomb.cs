@@ -36,6 +36,7 @@ public class EnemyWithBomb: MonoBehaviour
     public Button nextLevelButton; // Button to proceed to the next level
     public GameObject endGamePanel;
     public TextMeshProUGUI endGameText;
+    public GameObject inGamePanel;
 
     public Animator animator;
 
@@ -100,6 +101,7 @@ public class EnemyWithBomb: MonoBehaviour
         {
             endGameText.text = "You Won The Game! Thanks For Playing!";
             endGamePanel.SetActive(true);
+            inGamePanel.SetActive(false);
         }
         else
         {
