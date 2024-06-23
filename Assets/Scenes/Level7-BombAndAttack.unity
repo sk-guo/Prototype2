@@ -3519,7 +3519,7 @@ MonoBehaviour:
   maxHealth: 100
   actualHealth: 100
   maxFriendship: 100
-  healthDecrease: 20
+  healthDecrease: 25
   friendshipIncrease: 1
   friendship: 100
   playerHealthDecrease: 3
@@ -3540,6 +3540,7 @@ MonoBehaviour:
   nextLevelButton: {fileID: 1929758038}
   endGamePanel: {fileID: 0}
   endGameText: {fileID: 0}
+  inGamePanel: {fileID: 0}
   animator: {fileID: 716950284}
 --- !u!1 &718089190
 GameObject:
