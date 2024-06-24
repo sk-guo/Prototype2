@@ -3676,6 +3676,8 @@ MonoBehaviour:
   endGameText: {fileID: 293047147}
   inGamePanel: {fileID: 762724041}
   creditsBackground: {fileID: 2033694193}
+  PlayerCharacter: {fileID: 1475521094}
+  Monster: {fileID: 716950281}
   animator: {fileID: 716950284}
 --- !u!1 &718089190
 GameObject:

@@ -38,6 +38,8 @@ public class EnemyWithBomb: MonoBehaviour
     public TextMeshProUGUI endGameText;
     public GameObject inGamePanel;
     public GameObject creditsBackground;
+    public GameObject PlayerCharacter;
+    public GameObject Monster;
 
     public Animator animator;
 
@@ -104,6 +106,8 @@ public class EnemyWithBomb: MonoBehaviour
             endGamePanel.SetActive(true);
             creditsBackground.SetActive(true);
             inGamePanel.SetActive(false);
+            PlayerCharacter.SetActive(false);
+            Monster.SetActive(false);
         }
         else
         {
